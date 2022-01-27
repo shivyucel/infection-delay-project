@@ -1,6 +1,9 @@
 # effective_distance_py3.py
 # This is the effective distance script from https://github.com/andreaskoher/effective_distance, just translated to python3.
 
+
+#LINE 152-156 CONTAINS THE CODE TO INCORPORATE THE REAL MOBILITY CHANGES
+
 import numpy as np
 from numpy import genfromtxt, log, array, exp, save
 from networkx import DiGraph, shortest_path_length, adjacency_matrix, shortest_path, all_simple_paths, strongly_connected_components
@@ -19,8 +22,8 @@ class EffectiveDistances:
         self.dominant_path_distance = None
         self.multiple_path_distance = None
         self.random_walk_distance = None
-        self.data_path = '/Users/shivyucel/Documents/SDS_2021.nosync/SDS_2020-2021/SDS_Thesis/Data/h3/'
-        self.merged = pd.read_csv(self.data_path + 'real_commute_mob_change_ED.csv')
+        self.data_path = ''
+        self.merged = pd.read_csv(self.data_path + 'filtered_mobility_reduction.csv')
 
 
         
