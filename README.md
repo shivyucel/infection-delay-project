@@ -1,9 +1,9 @@
 # Infection Delay Data and Code
 
-This GitHub repository contains all of the code required for the preprocessing, implementation, and subsequent analysis of the Infection Delay Model paper.
+This GitHub repository contains all of the code required for the preprocessing, implementation, and subsequent analysis of the Infection Delay Model paper. It also contains the raw data required for the project, along with inputs to the main models, and final result data sets. 
 
 ## Data 
-** Stored here: https://www.dropbox.com/sh/04dkaz5rlhmvueu/AADr_cMxxmqBp-GJq4Mb0_Axa?dl=0 **
+**Stored here: https://www.dropbox.com/sh/04dkaz5rlhmvueu/AADr_cMxxmqBp-GJq4Mb0_Axa?dl=0**
 
 The raw data folder contains the census and commuting data, along with the relevant shapefiles and labels. 
 
