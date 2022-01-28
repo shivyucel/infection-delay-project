@@ -5,7 +5,7 @@ This GitHub repository contains all of the code required for the preprocessing, 
 ## Data 
 **Stored here: https://www.dropbox.com/sh/04dkaz5rlhmvueu/AADr_cMxxmqBp-GJq4Mb0_Axa?dl=0**
 
-The raw data folder contains the census and commuting data, along with the relevant shapefiles and labels. 
+The raw data folder contains the census and commuting data, along with their relevant shapefiles and labels. It also contains the shapefiles for the 2599 hexagons used in this analysis.
 
 The prelim_data folder contains the h3_IDs table, used to numerically identify hexagons (more info included in info file in folder). It also includes the commuting data, already preprocessed using code in the Effective Distance/SIR Model folder to filter out regions which do not have suitable data. 
 
@@ -17,7 +17,7 @@ The mobility_data folder contains the raw mobility data from March - September 2
 
 The result_data folder contains the tables used to generate the results, including the weighted median 10-day infection delay values for every region, the outbreak divided results, merged with income and centrality data. The final data files are 'weighted_hexagon_data.csv' and 'longford_outbreak_split_delays'.
 
-NOTE: The raw infection delay files take up 30+ GB of storage, and are not included here. In both mobility scenario, 2599 tables are generated, each with 2599 columns, representing the time series of every hexagon for every outbreak scenario. These are then duplicated in reorient_infection_delay_tables.py, to make them amenable to analysis.
+NOTE: The infection delay files take up 30+ GB of storage, and are not included here. In both mobility scenario, 2599 tables are generated, each with 2599 columns, representing the time series of every hexagon for every outbreak scenario. These are then duplicated in reorient_infection_delay_tables.py, to make them amenable to analysis.
 
 
 ## Code
@@ -47,7 +47,7 @@ Effective Distance code from: https://github.com/andreaskoher/effective_distance
 
 Iannelli, F., Koher, A., Brockmann, D., Hövel, P., & Sokolov, I. M. (2017). Effective distances for epidemics spreading on complex networks. Physical Review. E, 95(1–1), 12313. https://doi.org/10.1103/PhysRevE.95.012313
 
-Note: adjustments to effective_distance codea re made in effective_distance_real_changes.py to incorporate real mobility adjustments.
+Note: adjustments to effective_distance code are made in effective_distance_real_changes.py to incorporate real mobility adjustments.
 
 SIR Model code from: https://github.com/franksh/EpiCommute
 
