@@ -1,6 +1,6 @@
 # Infection Delay Data and Code
 
-This GitHub repository contains all of the code required for the preprocessing, implementation, and subsequent analysis of the Infection Delay Model paper. It also contains the raw data required for the project, along with inputs to the main models, and final result data sets. 
+This GitHub repository contains all of the code required for the preprocessing, implementation, and subsequent analysis of the Infection Delay Model paper. It also contains the raw data required for the project, along with effective distance inputs to the main models, and final result data sets. 
 
 ## Data 
 **Stored here: https://www.dropbox.com/sh/04dkaz5rlhmvueu/AADr_cMxxmqBp-GJq4Mb0_Axa?dl=0**
@@ -24,9 +24,9 @@ NOTE: The infection delay files take up 30+ GB of storage, and are not included 
 
 ### 1. Preprocessing
 
-Contains the code for the interpolation of census, income, and commuting survey data to the h3 hexagons.
+Contains the code for the interpolation of census and commuting survey data to the h3 hexagons. Also contains code for calculating hexagon cell mobility changes after lockdown.
 
-### 2. Effective Distance/SIR Model *
+### 2. Effective Distance/SIR Model (citations below)
 
 
 Once the preprocessing is complete, this directory contains the necessary steps to calculate the dominant path effective distances on the h3-interpolated commuting network. This includes both the baseline and real mobility reduction scenarios. The h3 hexagons used in the analysis must be filtered by coordinating across the SIR and effective distance files, to ensure that all conditions necessary to run the analyses are met. 
@@ -43,12 +43,13 @@ Calculates the infection delay values for every region across all outbreak scena
 The results file first organizes the income and centrality data, then creates the weighted median infection delay values and the unweighted median infection delay values. It also divides the outbreak locations into top and bottom 50% in-degree centrality groups, and calculates each region's median infection delay under each income and centrality grouping. 
 
 --------------------------------------------------------------------------------------------------
-Effective Distance code from: https://github.com/andreaskoher/effective_distance
+
+* Effective Distance code from: https://github.com/andreaskoher/effective_distance
 
 Iannelli, F., Koher, A., Brockmann, D., Hövel, P., & Sokolov, I. M. (2017). Effective distances for epidemics spreading on complex networks. Physical Review. E, 95(1–1), 12313. https://doi.org/10.1103/PhysRevE.95.012313
 
 Note: adjustments to effective_distance code are made in effective_distance_real_changes.py to incorporate real mobility adjustments.
 
-SIR Model code from: https://github.com/franksh/EpiCommute
+* SIR Model code from: https://github.com/franksh/EpiCommute
 
 Schlosser, F., Maier, B. F., Jack, O., Hinrichs, D., Zachariae, A., & Brockmann, D. (2021). COVID-19 lockdown induces disease-mitigating structural changes in mobility networks. Proceedings of the National Academy of Sciences of the United States of America, 117(52), 32883–32890. https://doi.org/10.1073/PNAS.2012326117

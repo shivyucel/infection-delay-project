@@ -20,7 +20,7 @@ income_quartiles <- c(
 )
 
 plot <-ggplot(data=weighted_delays) + 
-  geom_boxplot(mapping=aes(x=in_degree_quartile, y=weighted_ID, group=in_degree_quartile, color = in_degree_quartile)) + 
+  geom_boxplot(mapping=aes(x=in_degree_quartile, y=weighted_ID, group=in_degree_quartile, color = in_degree_quartile), alpha=0.4) + 
   facet_wrap(~income_quartile, nrow=1, labeller = as_labeller(income_quartiles)) + 
   scale_color_lancet() +
   xlab("In-Degree Quartile") + 
@@ -37,7 +37,7 @@ indegree_quartiles <- c(
 )
 
 ggplot(data=weighted_delays) + 
-  geom_boxplot(mapping=aes(x=income_quartile, y=weighted_ID, group=income_quartile, color = income_quartile)) + 
+  geom_boxplot(mapping=aes(x=income_quartile, y=weighted_ID, group=income_quartile, color = income_quartile), alpha=0.4) + 
   facet_wrap(~in_degree_quartile, nrow=1, labeller = as_labeller(indegree_quartiles)) + 
   scale_color_lancet() +
   xlab("Income Quartile") + 
@@ -79,7 +79,7 @@ indegree_quartiles <- c(
 )
 
 ggplot(data=outbreak_split) + 
-  geom_boxplot(mapping = aes(x=income_quartile, y=infection_delay, color = outbreak_centrality)) + 
+  geom_boxplot(mapping = aes(x=income_quartile, y=infection_delay, color = outbreak_centrality), alpha=0.4) + 
   facet_wrap(~in_degree_quartile, nrow=1, labeller = as_labeller(indegree_quartiles)) + 
   scale_color_lancet() +
   xlab("Income Quartile") + 
@@ -95,7 +95,7 @@ income_quartiles <- c(
 )
 
 ggplot(data=outbreak_split) + 
-  geom_boxplot(mapping = aes(x=in_degree_quartile, y=infection_delay, color = outbreak_centrality)) + 
+  geom_boxplot(mapping = aes(x=in_degree_quartile, y=infection_delay, color = outbreak_centrality), alpha=0.4) + 
   facet_wrap(~income_quartile, nrow=1, labeller = as_labeller(income_quartiles)) + 
   scale_color_lancet() +
   xlab("In-Degree Quartile") + 
