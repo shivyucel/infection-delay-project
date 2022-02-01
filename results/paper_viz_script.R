@@ -127,11 +127,6 @@ theme_set(theme_minimal())
 
 time_saved <- read_csv('/Users/shivyucel/Documents/SDS_2021.nosync/SDS_2020-2021/SDS_Thesis/Data/h3/SIR/time_saved/new_outlier_outbreaks/445.csv')
 
-ggplot(data = long_time_saved) + 
-  geom_line(mapping = aes(x=X1, y=value, color=variable)) + 
-  xlab('Time (t) in Days') + 
-  ylab('Infection Delay of Lockdown at Time t')
-
 
 time_saved_long = melt(select(time_saved, 'X1', 0:10), id.vars = 'X1')
 
@@ -140,26 +135,28 @@ p_1 <- ggplot(data = time_saved_long) +
   geom_line(mapping = aes(x=X1, y=value, color=variable), size=1.5) + 
   xlab('Time (t) in Days') + 
   ylab('Infection Delay at Time t') + 
+  ggtitle("(a)") +
   scale_color_lancet() + 
   theme(legend.position="none", axis.text=element_text(size=20),
-        axis.title=element_text(size=25)) + 
+        axis.title=element_text(size=25), plot.title = element_text(hjust = 0.5, size=20)) +
   scale_y_continuous(limits = c(0, 15)) 
+
+
 p_1
 
 
 time_saved_T <- rotate_df(time_saved, cn = T)
-time_saved_T_2 <- median(time_saved_T)
+time_saved_T_2 <- apply(time_saved_T,2,median)
 
-p_1
-
-
-p_2 <- ggplot(data=df) +
-  geom_line(mapping = aes(x=idu, y=apply.time_saved_T..2..median.), size=1.5, color='black') + 
+time_saved$median = time_saved_T_2
+p_2 <- ggplot(data=time_saved) +
+  geom_line(mapping = aes(x=X1, y=median), size=1.5, color='black') + 
   scale_y_continuous(limits = c(0, 15)) + 
   xlab('Time (t) in Days') +
   ylab('Median Infection Delay \n at Time t') + 
+  ggtitle("(b)") +
   scale_color_lancet() +
   theme(legend.position="none", axis.text=element_text(size=20),
-        axis.title=element_text(size=25)) 
+        axis.title=element_text(size=25), plot.title = element_text(hjust = 0.5, size=20)) 
 
-p_2
+grid.arrange(p_1, p_2, ncol=2)
