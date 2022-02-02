@@ -19,6 +19,7 @@ The result_data folder contains the tables used to generate the results, includi
 
 NOTE: The infection delay files take up 30+ GB of storage, and are not included here. In both mobility scenario, 2599 tables are generated, each with 2599 columns, representing the time series of every hexagon for every outbreak scenario. These are then duplicated in reorient_infection_delay_tables.py, to make them amenable to analysis.
 
+Full commuting data set, beyond that included in the raw data folder, can be found here http://www.metro.sp.gov.br/pesquisa-od/.
 
 ## Code
 
