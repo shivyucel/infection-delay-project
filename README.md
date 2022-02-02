@@ -3,7 +3,7 @@
 This GitHub repository contains all of the code required for the preprocessing, implementation, and subsequent analysis of the Infection Delay Model paper. It also contains the raw data required for the project, along with effective distance inputs to the main models, and final result data sets. 
 
 ## Data 
-**Stored here: https://www.dropbox.com/sh/04dkaz5rlhmvueu/AADr_cMxxmqBp-GJq4Mb0_Axa?dl=0**
+**Stored here: https://doi.org/10.5281/zenodo.5947174**
 
 The raw data folder contains the census and commuting data, along with their relevant shapefiles and labels. It also contains the shapefiles for the 2599 hexagons used in this analysis.
 
