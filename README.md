@@ -25,7 +25,7 @@ Full commuting data set, beyond that included in the raw data folder, can be fou
 
 ### 1. Preprocessing
 
-Contains the code for the interpolation of census and commuting survey data to the h3 hexagons. Also contains code for calculating hexagon cell mobility changes after lockdown.
+Contains the code for the interpolation of census and commuting survey data to the h3 hexagons. Also contains code for calculating hexagon cell mobility changes after lockdown and preprocessing the raw commuting data (processed commuting data in Zenodo repository).
 
 ### 2. Effective Distance/SIR Model (citations below)
 
