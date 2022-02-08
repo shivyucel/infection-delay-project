@@ -1,6 +1,3 @@
-# BY RAFAEL H. M. PEREIRA
-
-
 
 ######### Household travel survey SP 2017 #########
 
